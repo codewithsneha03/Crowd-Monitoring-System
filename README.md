@@ -1,48 +1,110 @@
-# Smart Crowd Monitoring and Stampede Prevention System
+# Smart Crowd Monitoring and Stampede Prevention System using CSI-Based Crowd Sensing
 
-## Overview
+## Project Overview
 
-This project proposes a CSI-based crowd monitoring system for pilgrimage sites and large public gatherings.
+Large gatherings such as Kumbh Mela, Hajj, temple festivals, concerts, and railway stations often face the risk of overcrowding and stampedes. Traditional monitoring methods such as manual observation and CCTV cameras have limitations in large and highly congested environments.
 
-The system estimates crowd density using wireless signal variations, processes data using Kalman Filtering, and provides real-time alerts through an SDN-enabled control architecture.
+This project proposes a Computer Networks and IoT based crowd monitoring system that utilizes Channel State Information (CSI) sensing to estimate crowd density in real time. The collected information is transmitted through MQTT-based communication networks to a central monitoring system, where crowd conditions are analyzed and displayed through a live dashboard.
+
+The objective is to provide early warnings, assist authorities in identifying dangerous crowd conditions, and support faster decision-making during emergencies.
+
+---
+
+## Key Features
+
+* Real-time crowd density estimation
+* CSI-based device-free crowd sensing
+* IoT-enabled sensing architecture
+* MQTT-based communication
+* Real-time dashboard monitoring
+* Risk level classification (Safe, Warning, Danger)
+* Emergency alert generation
+* Scalable architecture for large public events
 
 ---
 
 ## Technologies Used
 
-- CSI (Channel State Information)
-- IoT Sensing Nodes
-- MQTT
-- TCP/IP
-- Node-RED Dashboard
-- SDN
-- Kalman Filter
+### Computer Networks
+
+* TCP/IP
+* MQTT Protocol
+* Client-Server Architecture
+* WebSocket Communication
+* Software Defined Networking (Conceptual)
+
+### IoT
+
+* ESP32 Sensor Nodes
+* Wireless Communication
+* Real-Time Data Collection
+
+### Software Tools
+
+* Wokwi ESP32 Simulator
+* HiveMQ MQTT Broker
+* Node-RED Dashboard
+* GitHub Repository
 
 ---
 
-## Prototype Demonstration
+## Proposed Architecture
 
-The prototype demonstrates:
+CSI Sensors
+↓
+MQTT Communication Network
+↓
+Central Processing Server
+↓
+Risk Analysis Engine
+↓
+SDN Controller
+↓
+Dashboard / Signboards / PA Systems / Alerts
 
-- Real-time crowd density monitoring
-- MQTT communication
-- Risk level estimation
+---
+
+## Research Motivation
+
+Recent research shows that WiFi probe-sniffing methods are becoming less reliable because modern smartphones use MAC randomization, privacy protection mechanisms, and reduced probe transmissions.
+
+Therefore, current research trends are moving toward CSI-based crowd sensing, where crowd density is estimated from wireless signal disturbances caused by human presence rather than by counting mobile devices.
+
+This approach:
+
+* Improves privacy
+* Does not require user participation
+* Does not require GPS
+* Does not require mobile applications
+* Can work even when users are not connected to WiFi
+
+---
+
+## Live Dashboard
+
+The real-time crowd monitoring dashboard can be accessed at:
+
+https://mobster-unbraided-umbilical.ngrok-free.dev/ui
+
+Features:
+- Zone-wise crowd density monitoring
+- Risk level detection
 - Emergency alert generation
 
----
-
-## Wokwi Simulation
-
-https://wokwi.com/projects/467196218023627777
+Note: The dashboard is available only while Node-RED and ngrok are running.
 
 ---
 
-## Dashboard
+## Future Scope
 
-Screenshots are available in the Screenshots folder.
+* Integration with real CSI sensing hardware
+* AI-based crowd prediction
+* Smart city integration
+* Multi-location crowd monitoring
+* Automated emergency response systems
 
 ---
 
 ## Author
 
-Sneha H
+Name: Sneha H
